@@ -1,0 +1,94 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    background-image: url('../image/back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 1s ease-in-out; /* Add transition for a smooth background change */
+
+  }
+
+  .tab-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tab {
+    position: relative;
+    width: 700px; /* Set your desired width */
+    height: 400px; /* Set your desired height */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .hand-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+  }
+
+  .swiper-container {
+    overflow: hidden;
+    position: absolute;
+    top: 0; /* Adjust positioning as needed */
+    left: 0; /* Adjust positioning as needed */
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    z-index: 2; /* Ensure the Swiper is above the hand image */
+  }
+
+  .swiper-slide {
+    position: relative;
+    width: 100%; /* Set fixed width for the slides */
+    height: 100%; /* Set fixed height for the slides */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .swiper-slide img {
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 130px;
+    width: 67%;
+    height: 73%;
+    z-index: 0;
+    filter: blur(2px); /* Adjust the blur value as needed */
+    object-fit: cover; /* Ensure the image covers the entire slide */
+  }
+
+  @media (max-width:590px) {
+    .swiper-slide img{
+        margin-left: 120px;
+    }
+
+  }
+
+  @media (max-width:414px) {
+    .swiper-slide img{
+        margin-left: 90px;
+    }
+    
+    .watermark{
+        left: 55% !important; 
+     }
+  }
+
+  .watermark {
+    z-index: 9999999;
+    position: absolute;
+    top: 35%; /* Adjust top position as needed */
+    left: 50%; /* Adjust left position as needed */
+    transform: translate(-50%, -50%); /* Center the watermark */
+    font-size: 25px;
+    color:#fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }

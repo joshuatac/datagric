@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataGric.Com</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+</head>
+<body>
+
+<div class="tab-container">
+  <div class="tab">
+    <!-- Hand Image -->
+    <img class="hand-image" src="image/hand.png" alt="Hand with Tablet">
+    
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="image/hack2.jpg" alt="Image 1">
+            <div class="watermark">Datagric.com</div>
+          </div>
+          
+          <div class="swiper-slide">
+            <img src="image/hack4.jpg" alt="Image 3">
+            <div class="watermark">Datagric.com</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="image/hack7.jpg" alt="Image 3">
+            <div class="watermark">Datagric.com</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="image/hack8.jpg" alt="Image 3">
+            <div class="watermark">Datagric.com</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="image/hack3.jpg" alt="Image 2">
+            <div class="watermark">Datagric.com</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="image/hack5.jpg" alt="Image 3">
+            <div class="watermark">Datagric.com</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="image/hack6.jpg" alt="Image 3">
+            <div class="watermark">Datagric.com</div>
+          </div>
+         
+          <div class="swiper-slide">
+            <img src="image/hack.jpg" alt="Image 3">
+            <div class="watermark">Datagric.com</div>
+          </div>
+        </div>
+      </div>
+      
+
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        effect: 'fade', // Set fade effect
+        autoplay: {
+          delay: 1000,
+        }
+      });
+
+    var backgroundIndex = 0;
+    const backgrounds = [
+      'url("image/back2.jpg")',
+      'url("image/back3.jpg")',
+      'url("image/back4.jpg")',
+    ];
+
+    setInterval(function () {
+      document.body.style.backgroundImage = backgrounds[backgroundIndex];
+      backgroundIndex = (backgroundIndex + 1) % backgrounds.length;
+    }, 5000); // Change background every 5 seconds
+  });
+  </script>
+  
+  
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</body>
+</html>
